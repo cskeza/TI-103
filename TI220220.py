@@ -30,6 +30,46 @@ def compte (l):
 
     return somme
 
-print(compte([2,4,5]))
+"""
+Une fonction qui donne les x premiers nbres carrees et retoune une liste,
+ou x est un parametre
+"""
 
-print(sum([2,4,5]))
+def puissances(x):
+    l=[]
+
+    for i in range (1, x+1):
+        l.append(i**3)
+
+    return l
+
+
+#print(compte([2,4,5]))
+
+#print(sum([2,4,5]))
+
+print(puissances(12))
+
+l1= [1,2,4]
+l2=[3,6]
+print (l1+l2)
+
+"""
+Fonction qui dit si un elt est ds la liste
+"""
+def est_dans_la_liste(l, elem):
+
+    if elem in l:
+        return True
+    else:
+        return False
+"Fonction qui donne en retour le nbre d'occurence ds la liste"
+
+def compte_ds_liste(l, elem):
+    i=0
+
+    while elem in l:
+        i +=1
+        l.remove(elem)
+
+    return i
